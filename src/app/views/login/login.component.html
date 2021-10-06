@@ -1,0 +1,15 @@
+<mat-card class="main-container">
+    <h1>Acessar</h1>
+    <mat-form-field class="login-form" appearance="fill">
+        <mat-label>CPF</mat-label>
+        <input autofocus [(ngModel)]="login" matInput>
+    </mat-form-field>
+    <p></p>
+    <mat-form-field class="login-form" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input type="password" [(ngModel)]="password" matInput>
+    </mat-form-field>
+
+    <button (click)="logar()" class="login-button" mat-raised-button color="primary">Entrar</button>
+    <a href="/cadastro">Ainda não possui uma conta? Clique aqui para se cadastrar!</a>
+</mat-card>

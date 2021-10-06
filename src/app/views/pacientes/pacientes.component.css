@@ -1,0 +1,70 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.searchbar {
+    width: 85%;
+}
+
+.search-div {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mat-card-table {
+    width: auto;
+}
+
+.search-div button {
+    text-align: center;
+    width: auto;
+    height: 4rem;
+}
+
+.tg {
+    width: auto;
+    height: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.tg tr th {
+    background-color: #673ab7;
+    color: white;
+}
+
+.tg td {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg th {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 14px;
+    font-weight: normal;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg .tg-baqh {
+    text-align: center;
+    vertical-align: top
+}

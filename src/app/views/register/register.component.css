@@ -1,0 +1,39 @@
+.main-container {
+    margin: 5% auto;
+    width: 30rem;
+    height: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1%;
+    text-align: center;
+}
+
+.error {
+    color: red;
+    margin: 1rem 1rem 1rem 1rem;
+    margin: solid red 1px;
+}
+
+.login-form {
+    width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.login-button {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+a::before {
+    color: black;
+}

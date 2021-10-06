@@ -1,0 +1,29 @@
+.title {
+    font-size: 3rem;
+    font-weight: 1;
+    margin-bottom: 1rem;
+}
+
+.header {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    background-color: #673ab7;
+}
+
+.header button {
+    background-color: white;
+    color: #673ab7;
+    font-size: large;
+    width: 6rem;
+    height: 4rem;
+    font-weight: 300;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.icon {
+    font-size: 4rem;
+    color: white;
+}

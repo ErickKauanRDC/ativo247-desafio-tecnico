@@ -1,0 +1,53 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<mat-card class="main-container">
+    <div class="search-div">
+        <mat-form-field class="searchbar" appearance="outline">
+            <mat-label>Pesquisar</mat-label>
+            <input class="form-control" matInput [(ngModel)]="filter">
+        </mat-form-field>
+        <a [routerLink]="['/home/novo-paciente']"><button  mat-raised-button color="primary">Novo Paciente</button></a>
+    </div>
+    <mat-card>
+
+        <table class="tg" style="table-layout: fixed">
+            <colgroup>
+                <col style="width: 200px">
+                <col style="width: 105px">
+                <col style="width: 280px">
+                <col style="width: 105px">
+                <col style="width: 86px">
+                <col style="width: 205px">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th class="tg-baqh">Nome</th>
+                    <th class="tg-baqh">CPF</th>
+                    <th class="tg-baqh">Médico</th>
+                    <th class="tg-baqh">Ultima prescrição</th>
+                    <th class="tg-baqh">Status</th>
+                    <th class="tg-baqh">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let paciente of pacientes|filter:filter; let i = index">
+                    <td class="tg-baqh">{{paciente.nome}}</td>
+                    <td class="tg-baqh">{{paciente.cpf}}</td>
+                    <td class="tg-baqh">{{paciente.medico}}</td>
+                    <td class="tg-baqh">{{paciente.last}}</td>
+                    <td class="tg-baqh">{{paciente.status}}</td>
+                    <td class="tg-baqh">
+                        <div class="icon-div">
+
+                            <mat-icon (click)="deletePaciente(paciente.codigo)" color="primary" class="icon">delete</mat-icon>
+
+                            <a [queryParams]="{id:paciente.codigo}" [routerLink]="['/home/editar-paciente']">
+                                <mat-icon color="primary" class="icon">edit</mat-icon>
+                            </a>
+                        </div>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </mat-card>
+</mat-card>

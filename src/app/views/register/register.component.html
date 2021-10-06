@@ -1,0 +1,36 @@
+<mat-card class="main-container">
+    <h1>Cadastro</h1>
+    <mat-card class="error" *ngFor="let erro of erros">{{erro}}</mat-card>
+    <mat-form-field class="login-form" appearance="fill">
+        <mat-label>CPF</mat-label>
+        <input autofocus [(ngModel)]="login" matInput>
+    </mat-form-field>
+
+    <mat-form-field class="login-form" appearance="fill">
+        <mat-label>Nome completo</mat-label>
+        <input matInput [(ngModel)]="nome">
+    </mat-form-field>
+
+    <mat-form-field class="login-form" appearance="fill">
+        <mat-label>Telefone</mat-label>
+        <input matInput [(ngModel)]="telefone">
+    </mat-form-field>
+    <mat-form-field class="login-form" appearance="fill">
+        <mat-label>Senha</mat-label>
+        <input type="password" matInput [(ngModel)]="password">
+    </mat-form-field>
+    <mat-form-field class="login-form" appearance="fill">
+        <mat-label>Repita a senha</mat-label>
+        <input type="password" matInput [(ngModel)]="passwordConfirm">
+    </mat-form-field>
+    <mat-form-field class="login-form" appearance="fill">
+        <mat-label>Sexo</mat-label>
+        <mat-select [(ngModel)]="sexo">
+            <mat-option value="Masculino">Masculino</mat-option>
+            <mat-option value="Feminino">Feminino</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <button (click)="cadastrar()" class="login-button" mat-raised-button color="primary">Cadastrar</button>
+    <a href="/login">Já possui uma conta? Clique aqui para se logar!</a>
+</mat-card>

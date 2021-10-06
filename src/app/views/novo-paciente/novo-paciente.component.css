@@ -1,0 +1,58 @@
+* {
+    padding: 0.1rem;
+}
+
+.main-container {
+    display: block;
+    margin: 0 auto;
+    width: 60rem;
+    height: auto;
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+.paciente-dados {
+    display: flex;
+}
+
+.maior {
+    flex: 4;
+}
+
+h2 {
+    font-size: large;
+    color: gainsboro;
+}
+
+.error {
+    color: red;
+}
+
+textarea {
+    overflow: auto;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button {
+    font-size: medium;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 1;
+    margin-bottom: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.paciente-endereco {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

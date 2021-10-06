@@ -1,0 +1,86 @@
+<mat-card class="main-card">
+    <app-header></app-header>
+    <h1 class='title'>Editar Paciente</h1>
+    <mat-form-field class="fullwidth" appearance="outline">
+        <mat-label>Médico</mat-label>
+        <mat-select [(ngModel)]="paciente.medico" [(value)]="paciente.medico">
+            <mat-option value="Martin Edson Assunção">Martin Edson Assunção</mat-option>
+            <mat-option value="César Gabriel Assunção">César Gabriel Assunção</mat-option>
+            <mat-option value="Eduardo Renato Figueiredo">Eduardo Renato Figueiredo</mat-option>
+            <mat-option value="Alexandre Daniel Thiago Moura">Alexandre Daniel Thiago Moura</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <span *ngIf="cpfIsInvalid" class="error">CPF inválido</span>
+    <div class="paciente-dados">
+
+        <mat-form-field appearance="outline">
+            <mat-label>CPF</mat-label>
+            <input [(ngModel)]="paciente.cpf" (blur)="onBlurCpf(paciente.cpf)" matInput>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="maior">
+            <mat-label>Nome do paciente</mat-label>
+            <input [(ngModel)]="paciente.nome" matInput>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Telefone</mat-label>
+            <input [(ngModel)]="paciente.telefone" matInput>
+        </mat-form-field>
+
+    </div>
+    <h2>Endereço</h2>
+    <span *ngIf="cepIsInvalid" class="error">CEP inválido</span>
+    <div class="paciente-endereco">
+
+        <mat-form-field appearance="outline">
+            <mat-label>CEP</mat-label>
+            <input [(ngModel)]="paciente.cep" (blur)="onBlurCep(paciente.cep)" matInput>
+        </mat-form-field>
+
+        <mat-form-field class="maior" appearance="outline">
+            <mat-label>Rua</mat-label>
+            <input [(ngModel)]="cep.logradouro" matInput>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Numero</mat-label>
+            <input matInput [(ngModel)]="paciente.numero">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Bairro</mat-label>
+            <input [(ngModel)]="cep.bairro" matInput>
+        </mat-form-field>
+        <mat-form-field class="maior" appearance="outline">
+            <mat-label> Complemento</mat-label>
+            <input [(ngModel)]="paciente.complemento" matInput>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Estado</mat-label>
+            <mat-select (ngModelChange)="onChangeEstado(cep.uf)" [(value)]="cep.uf" [(ngModel)]="cep.uf">
+                <mat-option *ngFor="let estado of estados" value="{{estado.id}}">{{estado.estado}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Cidade</mat-label>
+            <mat-select [(value)]="cep.localidade" [(ngModel)]="cep.localidade">
+                <mat-option *ngFor="let cidade of cidades" value="{{cidade.cidade}}">{{cidade.cidade}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+    </div>
+    <h2>Observações</h2>
+
+    <mat-form-field class='fullwidth' appearance="outline">
+        <textarea [(ngModel)]="paciente.observacao" matInput></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Status do paciente</mat-label>
+        <mat-select value="ativo" [(ngModel)]="paciente.status">
+            <mat-option value="Ativo">Ativo</mat-option>
+            <mat-option value="Inativo">Inativo</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <div class="buttons">
+        <button (click)="cancelar()" mat-raised-button color="warn">Cancelar</button>
+        <button (click)="cadastrarPaciente()" mat-raised-button color="primary">Cadastrar Paciente</button>
+    </div>
+
+</mat-card>
