@@ -1,27 +1,14 @@
-# Ativo247Frontend
+# Desafio técnico Ativo247
+O projeto foi realizado com o front-end em Angular e o back-end sendo uma REST-API feita no framework Spring Boot.
+### Funcionalidades:
+- Criar, Visualizar, Editar e Deletar Paciente.
+- Pesquisa de pacientes.
+- Login e Cadastro simples.
+- Validação de CPF.
+- Validação e preenchimento automatico de CEP através da API dos correios.
+#### Como Visualizar o projeto:
+Para executar o projeto deve-se executar o arquivo `install.bat` quer serve para instalar as dependencias npm do front end e apos isso execute `start.bat` para que inicie o *front-end* e o *back end*. O *front end* ficará hospedado na porta 4200 do localhost e o back-end na porta 8080.
+Será necessário o npm ou yarn instalado para executar o front end,  e o Java para executar o back-end.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Repositorio do back-end detalhado: https://github.com/ErickKauanRDC/ativo247-spring-boot-api
